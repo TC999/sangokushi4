@@ -1,0 +1,8 @@
+[package]
+name = "s4-render"
+version = "0.1.0"
+edition = "2021"
+description = "Rendering pipeline (viewport, tiles, sprites, animation)"
+
+[dependencies]
+s4-platform = { path = "../s4-platform" }

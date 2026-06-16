@@ -1,0 +1,12 @@
+[package]
+name = "s4-app"
+version = "0.1.0"
+edition = "2021"
+description = "Application entry point and main game loop"
+
+[dependencies]
+s4-core = { path = "../s4-core" }
+s4-resource = { path = "../s4-resource" }
+s4-render = { path = "../s4-render" }
+s4-ui = { path = "../s4-ui" }
+s4-platform = { path = "../s4-platform" }

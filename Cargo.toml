@@ -1,0 +1,14 @@
+[workspace]
+members = [
+    "crates/s4-platform",
+    "crates/s4-core",
+    "crates/s4-resource",
+    "crates/s4-render",
+    "crates/s4-ui",
+    "crates/s4-app",
+]
+resolver = "2"
+
+[profile.release]
+opt-level = 2
+lto = true

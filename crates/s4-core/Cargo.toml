@@ -1,0 +1,8 @@
+[package]
+name = "s4-core"
+version = "0.1.0"
+edition = "2021"
+description = "Core game logic for Sangokushi IV rewrite (platform-independent)"
+
+[dependencies]
+s4-platform = { path = "../s4-platform" }
