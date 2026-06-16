@@ -110,30 +110,13 @@ impl GameLoop {
     fn process_turn(&mut self, _platform: &mut dyn Platform) {
         println!("\n>>> 处理第{}回合...", self.game.turn);
 
-        // 执行回合处理管道
-        s4_core::round::round_process(&mut self.game);
+        // 执行回合处理管道（包含时间推进）
+        let report = s4_core::round::round_process(&mut self.game);
 
-        // 推进时间
-        self.game.turn += 1;
-        self.advance_date();
+        // 打印回合报告
+        s4_core::round::print_round_report(&report);
 
-        // 渲染回合报告
-        renderer::render_round_report(&self.game, self.game.turn as u32);
-
-        println!(">>> 回合{}完成\n", self.game.turn - 1);
-    }
-
-    /// 推进日期。
-    fn advance_date(&mut self) {
-        self.game.day += 1;
-        if self.game.day > 30 {
-            self.game.day = 1;
-            self.game.month += 1;
-            if self.game.month > 12 {
-                self.game.month = 1;
-                self.game.year += 1;
-            }
-        }
+        println!(">>> 回合{}完成\n", report.round);
     }
 
     /// 处理内政命令。
