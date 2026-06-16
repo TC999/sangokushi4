@@ -162,6 +162,7 @@ fn init_officers_s1(game: &mut GameState) {
                 game.units.units[unit_idx].faction_id = faction as u8;
                 game.units.units[unit_idx].attr_1b = 3; // 移动力
                 game.units.units[unit_idx].attr_17 = officer.off7;
+                game.units.units[unit_idx].troops = 100;
                 game.units.units[unit_idx].col = ((id - 1) % 10) as u8;
                 game.units.units[unit_idx].row = ((id - 1) / 10) as u8;
             }
