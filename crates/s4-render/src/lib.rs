@@ -6,11 +6,11 @@
 //!   /20-viewport-and-map-rendering — 视口与地图渲染
 //!   /21-fade-and-scroll-animation — 淡入淡出与滚动动画
 
-mod viewport;
-mod tile;
-mod fade;
-mod font;
-mod palette;
+pub mod viewport;
+pub mod tile;
+pub mod fade;
+pub mod font;
+pub mod palette;
 
 pub use viewport::*;
 pub use tile::*;
